@@ -1,7 +1,7 @@
 package com.example.Logging.controller;
 
 import com.example.Logging.entity.Student;
-import com.example.Logging.service.StudentService;
+import com.example.Logging.service.StudentServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @CacheConfig(cacheNames = "student")
 public class StudentController {
     @Autowired
-    private StudentService studentService;
+    private StudentServiceImpl studentService;
    Logger logger=LoggerFactory.getLogger(StudentController.class);
 
     @PostMapping
